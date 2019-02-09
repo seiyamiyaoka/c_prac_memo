@@ -6,5 +6,7 @@ int main(void) {
   int a = 100;
   int b = 200;
   printf("%d円+%d円=%d円\n", a, b, a+b);
+
+  printf("%d/%d=%d...%d\n", 40, 13, 40 / 13, 40 % 13);
   return 0;
 }
