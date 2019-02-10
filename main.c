@@ -130,13 +130,46 @@ int main(void) {
 
   // int i;
   // for(i=1; i <= 10; i++) printf("%d回続いたよ\n", i);
-  int i, j;
-  for(i=1; i <= 9; i++) {
-    for(j=1; j <= 9; j++) {
-      printf("%dかける%dは", i, j);
-      printf("%2d\n", i * j);
-    }
-  }
+  // int i, j;
+  // for(i=1; i <= 9; i++) {
+  //   for(j=1; j <= 9; j++) {
+  //     printf("%dかける%dは", i, j);
+  //     printf("%2d\n", i * j);
+  //   }
+  // }
+  // for文で表した場合
+  // int i, money;
+  // int price = 1000000;
+  // money = 1;
+  // for (i=1; money <= price; i++ ) {
+  //   money *= 2;
+  //   printf("今の%d\n", i);
+  //   printf("もらえるお金%d\n", money);
+  // }
+
+  // int money = 1;
+  // int month = 1;
+  // while (money < 1000000) {
+  //   printf("%dヶ月目: %d円\n", month, money);
+  //   money *= 2;
+  //   month += 1;
+  // }
+  // printf("100万円もらえるのは%dヶ月目です\n", month);
+
+  // int r;
+  // do {
+  //   printf("半径を入力してください");
+  //   scanf("%d", &r);
+  // } while (r < 0);
+  // double result = r * r * 3.141592;
+  // printf("面積は%fです\n", result);
+  int point;
+  do {
+    printf("1~100の値を入力してください");
+    scanf("%d", &point);
+  } while(point < 0 ||
+     point > 100);
+  printf("あなたの点数は%dです\n", point);
   return 0;
 }
 
