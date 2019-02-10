@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int calc_price(int viva, int milk) {
   return viva  + milk * 2;
 }
@@ -56,14 +56,42 @@ int main(void) {
   // scanf("%d,%d", &min, &max);
   // int result_siguma = siguma(min, max);
   // printf("%d~%dの範囲では%d\n", min, max, result_siguma);
-  int price;
-  printf("定価となる値を入力してね\n");
-  scanf("%d", &price);
-  printf("1割引だと%d円\n", discount_value(price, 0.1));
-  printf("3割引だと%d円\n", discount_value(price, 0.3));
-  printf("5割引だと%d円\n", discount_value(price, 0.5));
-  printf("8割引だと%d円\n", discount_value(price, 0.8));
+  // int price;
+  // printf("定価となる値を入力してね\n");
+  // scanf("%d", &price);
+  // printf("1割引だと%d円\n", discount_value(price, 0.1));
+  // printf("3割引だと%d円\n", discount_value(price, 0.3));
+  // printf("5割引だと%d円\n", discount_value(price, 0.5));
+  // printf("8割引だと%d円\n", discount_value(price, 0.8));
 
+  // int num = 10;
+  // if(num) {
+  //   printf("%d\n", num);
+  // }
+
+  // int test_point;
+  // printf("テストの点数を入れてね\n");
+  // scanf("%d", &test_point);
+  // if (test_point > 100) {
+  //   printf("あなたの点数は100点です\n");
+  // } else {
+  //   printf("あなたの点数は%dです\n", test_point);
+  // }
+
+  int year, tmp;
+  printf("西暦を入れるとオリンピックが開かれたとしかどうかわかります");
+  scanf("%d", &year);
+  tmp = year % 4;
+  if (tmp == 0) {
+    int diff = abs(2000 - year);
+    if ((diff / 4) % 2 == 0) {
+      printf("夏に開催されています\n");
+    } else {
+      printf("冬に開催されています\n");
+    }
+  } else {
+    printf("開催されていません\n");
+  }
   return 0;
 }
 
