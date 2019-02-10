@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+int sum(int, int);
+
 int calc_price(int viva, int milk) {
   return viva  + milk * 2;
 }
@@ -21,6 +23,8 @@ void select_japanese_old_naming_year(int num) {
       printf("1~12しか受け付けません\n");
   }
 }
+
+int countfunc(int);
 
 int main(void) {
   // printf("intel:\tPentinum4\n");
@@ -163,14 +167,26 @@ int main(void) {
   // } while (r < 0);
   // double result = r * r * 3.141592;
   // printf("面積は%fです\n", result);
-  int point;
-  do {
-    printf("1~100の値を入力してください");
-    scanf("%d", &point);
-  } while(point < 0 ||
-     point > 100);
-  printf("あなたの点数は%dです\n", point);
+  // int point;
+  // do {
+  //   printf("1~100の値を入力してください");
+  //   scanf("%d", &point);
+  // } while(point < 0 ||
+  //    point > 100);
+  // printf("あなたの点数は%dです\n", point);
+  // sum(50, 100);
+  int num = 0;
+  countfunc(countfunc(countfunc(countfunc(num))));
   return 0;
 }
 
+int sum(int min, int max) {
+  printf("%d\n", (min + max) * (max - min + 1) / 2);
+  return 0;
+}
 
+int countfunc(int num) {
+  num += 1;
+  printf("%d\n", num);
+  return num;
+}
