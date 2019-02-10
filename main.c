@@ -12,6 +12,16 @@ int discount_value(int price, double value) {
   return (int)(price - (price * value));
 }
 
+void select_japanese_old_naming_year(int num) {
+  switch(num) {
+    case 1:
+      printf("睦月\n");
+      break;
+    default:
+      printf("1~12しか受け付けません\n");
+  }
+}
+
 int main(void) {
   // printf("intel:\tPentinum4\n");
   // printf("AMD\t:Atlon64\n");
@@ -78,20 +88,45 @@ int main(void) {
   //   printf("あなたの点数は%dです\n", test_point);
   // }
 
-  int year, tmp;
-  printf("西暦を入れるとオリンピックが開かれたとしかどうかわかります");
-  scanf("%d", &year);
-  tmp = year % 4;
-  if (tmp == 0) {
-    int diff = abs(2000 - year);
-    if ((diff / 4) % 2 == 0) {
-      printf("夏に開催されています\n");
-    } else {
-      printf("冬に開催されています\n");
-    }
-  } else {
-    printf("開催されていません\n");
-  }
+  // int year, tmp;
+  // printf("西暦を入れるとオリンピックが開かれたとしかどうかわかります");
+  // scanf("%d", &year);
+  // tmp = year % 4;
+  // if (tmp == 0) {
+  //   int diff = abs(2000 - year);
+  //   if ((diff / 4) % 2 == 0) {
+  //     printf("夏に開催されています\n");
+  //   } else {
+  //     printf("冬に開催されています\n");
+  //   }
+  // } else {
+  //   printf("開催されていません\n");
+  // }
+
+  // int age;
+  // printf("年齢を入力してください");
+  // scanf("%d", &age);
+  // if (age <= 3) printf("無料です\n");
+  // if (age >= 4 && age <= 12) printf("250円です\n");
+  // if (age >= 13) printf("400円です\n");
+  // int no;
+  // printf("番号を1~2で入れてください");
+  // scanf("%d", &no);
+  // switch (no) {
+  //   case 1:
+  //     printf("のび太です\n");
+  //     break;
+  //   case 2:
+  //     printf("tarou\n");
+  //     break;
+  //   default:
+  //     printf("存在しません\n");
+  // }
+  int num;
+  char result;
+  printf("1~12の数字を入れると日本の昔の月の呼び方を教えるよ");
+  scanf("%d", &num);
+  select_japanese_old_naming_year(num);
   return 0;
 }
 
