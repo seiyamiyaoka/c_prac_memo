@@ -122,11 +122,21 @@ int main(void) {
   //   default:
   //     printf("存在しません\n");
   // }
-  int num;
-  char result;
-  printf("1~12の数字を入れると日本の昔の月の呼び方を教えるよ");
-  scanf("%d", &num);
-  select_japanese_old_naming_year(num);
+  // int num;
+  // char result;
+  // printf("1~12の数字を入れると日本の昔の月の呼び方を教えるよ");
+  // scanf("%d", &num);
+  // select_japanese_old_naming_year(num);
+
+  // int i;
+  // for(i=1; i <= 10; i++) printf("%d回続いたよ\n", i);
+  int i, j;
+  for(i=1; i <= 9; i++) {
+    for(j=1; j <= 9; j++) {
+      printf("%dかける%dは", i, j);
+      printf("%2d\n", i * j);
+    }
+  }
   return 0;
 }
 
