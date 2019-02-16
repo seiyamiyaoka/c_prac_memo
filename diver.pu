@@ -1,0 +1,18 @@
+@startuml
+Entity users {
+  +id
+  --
+  name
+}
+
+class companies {
+  + name
+  --
+  # user_id
+  get_name
+}
+
+users --o{companies
+@enduml
+
+
