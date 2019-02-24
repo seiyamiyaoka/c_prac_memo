@@ -1,0 +1,1 @@
+void InputPeople(People *data);
