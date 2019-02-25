@@ -1,0 +1,1 @@
+int Sprint(int num);
